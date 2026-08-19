@@ -1,7 +1,7 @@
 # System Architecture & Component Interaction Guide
 
 This document provides a deep dive into the design patterns, sequence flows, data structures, and state transitions that form the core of the **SmartScheduler** engine.
-
+<!-- full diagram with proper explanation of implentation -->
 ---
 
 ## 1. Class Structure and Domain Boundaries
