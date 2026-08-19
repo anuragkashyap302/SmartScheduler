@@ -17,7 +17,7 @@
 // Fallback implementation of std::apply for GCC compatibility
 namespace concurrency_detail {
     template <typename F, typename Tuple, size_t... I>
-    void apply_impl(F&& f, Tuple&& t, std::index_sequence<I...>) {
+    void apply_impl(F&& f, Tuple&& t, std::index_sequence<I...>){
         std::forward<F>(f)(std::get<I>(std::forward<Tuple>(t))...);
     }
 
@@ -31,7 +31,7 @@ namespace concurrency_detail {
 }
 
 // Custom Mutex wrapper using Win32 CRITICAL_SECTION
-class Mutex {
+class Mutex{
 public:
     Mutex() {
         InitializeCriticalSection(&cs_);
@@ -55,7 +55,7 @@ private:
 };
 
 // Custom LockGuard (equivalent to std::lock_guard)
-class LockGuard {
+class LockGuard{
 public:
     explicit LockGuard(Mutex& m) : m_(m) {
         m_.lock();
@@ -72,7 +72,7 @@ private:
 };
 
 // Custom UniqueLock (equivalent to std::unique_lock)
-class UniqueLock {
+class UniqueLock{
 public:
     explicit UniqueLock(Mutex& m) : m_(m), locked_(true) {
         m_.lock();
@@ -106,7 +106,7 @@ private:
 };
 
 // Custom ConditionVariable using Win32 CONDITION_VARIABLE
-class ConditionVariable {
+class ConditionVariable{
 public:
     ConditionVariable() {
         InitializeConditionVariable(&cv_);

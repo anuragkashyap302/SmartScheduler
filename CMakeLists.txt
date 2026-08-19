@@ -20,6 +20,7 @@ set(SOURCES
     src/Scheduler.cpp
 )
 
+
 # Main Executable
 add_executable(SmartScheduler
     src/main.cpp

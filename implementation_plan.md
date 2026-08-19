@@ -1,5 +1,13 @@
 # Implementation Plan - C++ Multithreaded Task Scheduler
 ## Execution Phases
+<!-- ek ek karke phase wise implement karna hai , ek phase complete hone ke baad hi next phase implement karna hai -->
+
+<!-- 
+compiler --host	mingw64
+compiler	C:\msys64\mingw64\bin\g++.exe
+compiler version	14.1.0
+c++ standard	c++17
+  -->
 
 ### Phase 1: Core Domain Abstraction
 * Implement `Task.h` and `Task.cpp`.
